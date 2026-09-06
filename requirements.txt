@@ -1,0 +1,16 @@
+# Core OCR stack -- pinned to the versions this project was developed against
+paddleocr==3.3.2
+paddlepaddle==3.0.0
+
+# NOTE: headless OpenCV. The regular opencv-python pulls in GUI libraries
+# that are not present on Streamlit Community Cloud and will fail to import.
+opencv-python-headless>=4.9,<5
+
+numpy>=1.24,<2
+
+streamlit>=1.36
+
+# Only needed if you run the optional standalone Flask backend (api.py)
+Flask>=3.0
+Flask-Cors>=4.0
+requests>=2.31
